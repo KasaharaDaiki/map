@@ -103,18 +103,7 @@
           var latitude = markerData[i]['緯度'];
           if (!latitude) { continue; }
           addMarker(i, markerData[i]);
-          var name = markerData[i]['名称'];
-
-     　 markerEvent(i);
-      }
-
-      function setData(markerData){
-        var sidebar_html = "";
-        for (var i = 0; i < markerData.length; i++) {
-          var latitude = markerData[i]['緯度'];
-          if (!latitude) { continue; }
-          addMarker(i, markerData[i]);
-          var name = markerData[i]['カウントダウン'];
+          var name = markerData[i]['名称','カウントダウン'];
     
           sidebar_html += `<b>${i + 1}</b> <a href="javascript:openWindow(${i})">${name}<\/a><br />`;
         }
