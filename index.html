@@ -89,11 +89,6 @@
           content: info
         });
 
-         var info = '<div style="font-size:18px;font-weight:bold;margin-bottom:10px;">' + data['カウントダウン'] + '</div>';
-        infoWindow[i] = new google.maps.InfoWindow({
-          content: info
-        });
-        
         markerEvent(i);
       }
 
@@ -103,7 +98,7 @@
           var latitude = markerData[i]['緯度'];
           if (!latitude) { continue; }
           addMarker(i, markerData[i]);
-          var name = markerData[i]['名称','カウントダウン'];
+          var name = markerData[i]['名称'];
     
           sidebar_html += `<b>${i + 1}</b> <a href="javascript:openWindow(${i})">${name}<\/a><br />`;
         }
